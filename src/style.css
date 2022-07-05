@@ -1,0 +1,60 @@
+ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.weather-app-outline {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.city {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2155CD;
+}
+
+.weather-icon {
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+}
+
+.gps {
+    display: inline;
+    border-radius: 5px;
+    background-color: #79DAE8;
+    border-color: #0AA1DD;
+    border-width: 5px;
+}
+
+.gps:hover {
+    background-color: #0AA1DD;
+    border: none;
+    border-width: 5px;
+    border-color: #79DAE8;
+    border-style: solid;
+}
+
+#temperature-current {
+    display: inline;
+    color: #2155CD;
+    font-size: 40px;
+    line-height: 1.5;
+    font-weight: 800;
+}
+
+#unit-celsius {
+    display: inline;
+    text-decoration: none;
+    outline: none;
+    vertical-align: top;
+}
+
+#unit-fahrenheit {
+    display: inline;
+    text-decoration: none;
+    outline: none;
+    vertical-align: top;
+}
