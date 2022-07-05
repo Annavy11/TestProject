@@ -6,6 +6,12 @@ ul {
     margin-bottom: 0px;
 }
 
+.weather-app {
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
 .weather-app-outline {
     max-width: 600px;
     margin: 40px auto;
@@ -51,8 +57,17 @@ ul {
     vertical-align: top;
     line-height: 1.5;
     font-size: 19px;
+    color: #000;
+    }
+
+.active {
+  color:#2155CD;
+  font-weight: bold;
+  cursor: default;
 }
+
 
 a{
     text-decoration: none;
+    color: #000;
 }
