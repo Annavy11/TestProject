@@ -15,12 +15,16 @@ ul {
     color: #2155CD;
 }
 
+.city:first-letter {
+    text-transform: uppercase;
+}
+/*
 .weather-icon {
     margin-right: 5px;
     height: 64px;
     width: 64px;
 }
-
+*/
 .gps {
     display: inline;
     border-radius: 5px;
@@ -38,23 +42,19 @@ ul {
 }
 
 #temperature-current {
-    display: inline;
     color: #2155CD;
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.5;
     font-weight: 800;
+    vertical-align: middle;
 }
 
-#unit-celsius {
-    display: inline;
-    text-decoration: none;
+.units {
     outline: none;
     vertical-align: top;
+    line-height: 1.5;
 }
 
-#unit-fahrenheit {
-    display: inline;
+a{
     text-decoration: none;
-    outline: none;
-    vertical-align: top;
 }

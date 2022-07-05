@@ -44,16 +44,24 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <div class="temperature-info">
+                        <div class="clearfix temperature-info">
                             <img src="" alt="Clear" id="weather-icon" class="float-left" />
-                            <div class="float-left">
-                                <strong id="temperature-current">50</strong>
+                            <span class="float-left">
+                                <strong id="temperature-current"> </strong>
                                 <span class="units">
                                     <a href="#" id="unit-celsius" class="active">°C</a> |
                                     <a href="#" id="unit-fahrenheit">°F</a>
                                 </span>
-                            </div>
+                            </span>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li>Humidity: <span id="humidity"></span> % </li>
+                            <li>Wind: <span id="wind"></span> km/h </li>
+                        </ul>
                     </div>
                 </div>
             </div>
