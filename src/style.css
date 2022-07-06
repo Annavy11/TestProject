@@ -5,6 +5,9 @@ ul {
     padding-left: 5px;
     margin-bottom: 0px;
 }
+#description:first-letter {
+    text-transform: uppercase;
+}
 
 .weather-app {
     padding: 30px;
@@ -66,8 +69,22 @@ ul {
   cursor: default;
 }
 
-
 a{
     text-decoration: none;
     color: #000;
+}
+
+.weather-forecast {
+    color: rgba(0, 0, 0, 0.9);
+    list-style: none;
+    font-size: 17px;
+}
+
+.weather-forecast-icon {
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+.weather-forecast-temparature-min {
+    opacity: 0.7;
 }
