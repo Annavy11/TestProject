@@ -58,7 +58,28 @@ function getCurrentPosition(event) {
 let gpsButton = document.querySelector("#gps-button");
 gpsButton.addEventListener("click", getCurrentPosition);
 
-//Matt
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML ="";
+  let days = [ "Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function(day) {
+    forecastHTML = forecastHTML + ` 
+    <div class="weather-forecast" id="forecast">
+    <span class="weather-forecast-day"> ${day} </span>
+    <span class="weather-forecast-icon"> <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="" width="42"</span>
+    <span class="weather-forecast-temparature-min">15°</span>
+    <span class="weather-forecast-temparature-max">25°</span>
+    </div>
+    ` 
+    ;
+    
+  })
+
+  forecastElement.innerHTML = forecastHTML;
+
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature-current");
   let cityElement = document.querySelector("#city");
@@ -125,3 +146,4 @@ let celsiusUnit = document.querySelector("#unit-celsius");
 celsiusUnit.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+displayForecast()

@@ -77,11 +77,10 @@ a{
 .weather-forecast {
     color: rgba(0, 0, 0, 0.9);
     list-style: none;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .weather-forecast-icon {
-    font-size: 25px;
     padding: 0 10px;
 }
 
