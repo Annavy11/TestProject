@@ -58,23 +58,35 @@ function getCurrentPosition(event) {
 let gpsButton = document.querySelector("#gps-button");
 gpsButton.addEventListener("click", getCurrentPosition);
 
+//forecast
+
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecastInfo = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML ="";
-  let days = [ "Thursday", "Friday", "Saturday", "Sunday"];
-  days.forEach(function(day) {
+
+  forecastInfo.forEach(function(forecastDay, index) {
+    if (index < 5) {
     forecastHTML = forecastHTML + ` 
     <div class="weather-forecast" id="forecast">
-    <span class="weather-forecast-day"> ${day} </span>
-    <span class="weather-forecast-icon"> <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="" width="42"</span>
-    <span class="weather-forecast-temparature-min">15°</span>
-    <span class="weather-forecast-temparature-max">25°</span>
+    <span class="weather-forecast-day"> ${formatForecastDay(forecastDay.dt)} </span>
+    <span class="weather-forecast-icon"> <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="42"</span>
+    <span class="weather-forecast-temparature-min">${Math.round(forecastDay.temp.min)}°</span>
+    <span class="weather-forecast-temparature-max">${Math.round(forecastDay.temp.max)}°</span>
     </div>
     ` 
     ;
-    
+    }
   })
 
   forecastElement.innerHTML = forecastHTML;
