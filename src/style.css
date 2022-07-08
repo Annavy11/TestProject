@@ -60,14 +60,10 @@ ul {
     vertical-align: top;
     line-height: 1.5;
     font-size: 19px;
-    color: #000;
+    color: rgba(0, 0, 0, 0.8);    
+    font-weight: bold;
     }
 
-.active {
-  color:#2155CD;
-  font-weight: bold;
-  cursor: default;
-}
 
 a{
     text-decoration: none;
