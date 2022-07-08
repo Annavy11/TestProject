@@ -34,16 +34,10 @@ ul {
 .gps {
     display: inline;
     border-radius: 5px;
-    background-color: #79DAE8;
-    border-color: #0AA1DD;
-    border-width: 5px;
 }
 
 .gps:hover {
-    background-color: #0AA1DD;
-    border: none;
-    border-width: 5px;
-    border-color: #79DAE8;
+    background-color: #0aa1dd;
     border-style: solid;
 }
 
